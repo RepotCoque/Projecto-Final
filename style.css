@@ -35,3 +35,8 @@ div img{
     padding-top: 10px;
     height: 70px;
 }
+
+nav1 p{
+    display: flexbox;
+    flex-wrap: wrap;
+}
