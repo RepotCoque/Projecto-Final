@@ -25,7 +25,7 @@
             <div class="col">
                 <div class="card">
                     <img src="/Fotos/imagenusuario.png" class="card-img-top"
-                    alt="Hollywood Sign on The Hill" />
+                    alt="user" />
                     <div class="card-body">
                     <h5 class="card-title">Aniol Maestre</h5>
                     <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Popover Header" data-bs-content="Some content inside the popover">Decir algo</button>
@@ -65,15 +65,23 @@
         </div>
         <!--Ahora se introduce la paginacion de pagina-->
         <div class="d-flex">
-            <ul class="pagination mx-auto">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <ul class="padi pagination mx-auto">
+              <li class="page-item"><a class="page-link" href="/index.html">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="/index.html">1</a></li>
+              <li class="page-item active"><a class="page-link" href="/aboutUs.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="/api.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="/api.html">Next</a></li>
             </ul>
         </div>
     </main>
+
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+
     <footer>
         <div class="container-fluid bg-dark text-white d-flex rounded justify-content-around align-items-center">
             <h1>Rick & Morty <span class="badge text-dark bg-warning rounded-pill">WEB</span></h1>
@@ -111,11 +119,6 @@
         </div>
     </footer>
     <!--A continuacion se pone el script para que se activen los Popovers con Bootstrap-->
-    <script>
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
-        })
-    </script>
+    
 </body>
 </html>
