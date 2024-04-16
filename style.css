@@ -1,5 +1,6 @@
 html{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 100%;
 }
 
 header{
@@ -8,15 +9,20 @@ header{
     align-items: center;
     border-bottom: turquoise solid;
     border-width: 3px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-nav{
+#botonesnav{
     background-color: transparent;
     border-radius: 10px;
-    padding: 25px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-nav a{
+#botonesnav a{
     text-decoration: none;
     color: black;
     padding: 7px;
@@ -24,19 +30,41 @@ nav a{
     background-color: transparent;
     border: 2px black solid;
     border-radius: 5px;
+    margin: 10px;
 }
 
-nav a:hover {
+#botonesnav a:hover {
     color: turquoise;
     border: 2px turquoise solid;
 }
 
-div img{
+#titulo img{
     padding-top: 10px;
     height: 70px;
+    float: left;
 }
 
-nav1 p{
+#contenidohome{
     display: flexbox;
     flex-wrap: wrap;
 }
+
+.carousel-inner img{
+    max-width: 60%;
+
+}
+
+#demo button{
+    background-color: black;
+}
+
+footer{
+    bottom: 0;
+    position: absolute;
+}
+.container-fluid {
+        padding-right:0;
+        padding-left:0;
+        margin-right:auto;
+        margin-left:auto
+     }
