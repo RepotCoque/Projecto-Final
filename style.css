@@ -173,3 +173,12 @@ main .containerBuscador{
     padding: 10px;
     text-justify:auto;
 }
+
+#footerNav1{
+    border-radius: 15px;
+    background-color: rgb(22, 46, 19);
+}
+#footerNav2{
+    border-radius: 15px;
+    background-color: rgb(45, 29, 72);
+}
