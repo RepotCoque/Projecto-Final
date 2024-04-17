@@ -44,7 +44,7 @@ document.getElementById("resultado").innerHTML = ``
   for (let i = 0; i < data.results.length; i++) {
     document.getElementById("resultado").innerHTML += `
         <div class="ficha" style="width: 18rem;">
-        <img src="${data.results[i].image}" class="card-img-top" alt="..." background-color= "white">
+        <img src="${data.results[i].image}" class="card-img-top" alt="..." >
         <div class="information-card">
         <h5>${data.results[i].name}</h5>
         <p><b>Estatus: </b>${data.results[i].species}</p>
