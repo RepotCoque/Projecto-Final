@@ -1,14 +1,52 @@
-const baseURL = 'https://rickandmortyapi.com/api/character'; // Reemplaza con la URL de la API de personajes
+const apiRick=async (pagina)=>{
+    let url = "https://rickandmortyapi.com/api/character/?page="+pagina;
+    const api = await fetch(url);
+    const data = await api.json();
+    console.log(data);
+    divRes = document.getElementById("resultado");
+    divRes.innerHTML = "";
+    data.results.map(item=>{
+        divItem = document.createElement('div');
+        divItem.innerHTML = `
+        <div class="card" style="width: 18rem;">
+            <img src="${item.image}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text"><b>Estatus: </b>${item.status}</p>
+                <p class="card-text"><b>Especie: </b>${item.species}</p>
+                <p class="card-text"><b>Genero: </b>${item.genre}</p>
+            </div>
+        </div>
+        `
+        divRes.appendChild(divItem);
+    })
+}
+apiRick(1);
 
-async function searchCharacters() {
-    const searchTerm = document.getElementById('searchInput').value.trim();
+let personajeElegido;
 
-    try {
-        const response = await fetch(`${baseURL}?name=${searchTerm}`);
-        const data = await response.json();
+function searchCharacters() {
+  personajeElegido = document.getElementById("searchInput").value;
+  personajeElegido = personajeElegido.toLowerCase();
 
-        displayCharacters(data);
-    } catch (error) {
-        console.error('Error al buscar personajes:', error);
-    }
+  fetch("https://rickandmortyapi.com/api/character/?name=" + personajeElegido)
+    .then(function cogerRespuesta(respuesta) {
+      return respuesta.json();
+    })
+    .then(function cogerData(data) {
+      imprimirFicha(data);
+    });
+}
+
+function imprimirFicha(data) {
+document.getElementById("resultado").innerHTML = ``
+
+  for (let i = 0; i < data.results.length; i++) {
+    document.getElementById("resultado").innerHTML += `
+        <div class="ficha">
+        <h1>${data.results[i].name}</h1>
+        <img src="${data.results[i].image}">
+        <p>${data.results[i].species}</p>
+          `;
+  }
 }
