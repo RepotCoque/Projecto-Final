@@ -23,3 +23,27 @@ const apiRick=async (pagina)=>{
 }
 apiRick(1);
 
+function searchCharacter() {
+    const input = document.getElementById('searchInput').value;
+    const url = `https://swapi.dev/api/people/?search=${input}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const characters = data.results;
+            const displayArea = document.getElementById('result');
+            displayArea.innerHTML = ''; // Limpiar resultados anteriores
+
+            if (characters.length > 0) {
+                characters.forEach(character => {
+                    displayArea.innerHTML += `<p>Nombre: ${character.name}<br>Altura: ${character.height}<br>Peso: ${character.mass}<br>Color de pelo: ${character.hair_color}</p>`;
+                });
+            } else {
+                displayArea.innerHTML = '<p>No se encontraron personajes.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error en la solicitud:', error);
+            document.getElementById('result').innerHTML = '<p>Hubo un error al realizar la búsqueda.</p>';
+        });
+}
