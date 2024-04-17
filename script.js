@@ -43,10 +43,16 @@ document.getElementById("resultado").innerHTML = ``
 
   for (let i = 0; i < data.results.length; i++) {
     document.getElementById("resultado").innerHTML += `
-        <div class="ficha">
-        <h1>${data.results[i].name}</h1>
-        <img src="${data.results[i].image}">
-        <p>${data.results[i].species}</p>
-          `;
+        <div class="ficha" style="width: 18rem;">
+        <img src="${data.results[i].image}" class="card-img-top" alt="..." background-color= "white">
+        <div class="information-card">
+        <h5>${data.results[i].name}</h5>
+        <p><b>Estatus: </b>${data.results[i].species}</p>
+        <p><b>Estado: </b>${data.results[i].status}</p>
+        <p><b>Genero: </b>${data.results[i].genre}</p>
+         </div> 
+         `;
+          
+            
   }
 }

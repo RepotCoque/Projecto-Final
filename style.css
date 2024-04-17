@@ -40,13 +40,9 @@ header{
 
 #titulo img{
     padding-top: 10px;
-    height: 70px;
+    padding-bottom: 10px;
+    height: 80px;
     float: left;
-}
-
-#contenidohome{
-    display: flexbox;
-    flex-wrap: wrap;
 }
 
 .carousel-inner img{
@@ -128,4 +124,52 @@ main{
 
 main .containerBuscador{
     padding-top: 25px;
+}
+
+.information-card{
+    padding-top: 15px;
+    margin:auto;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+#descripcionTitulo{
+    color: rgb(59, 0, 114);
+    text-shadow: #0056b3 3px 3px 5px;
+    text-decoration-line: underline;
+}
+#contenidoHome{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+#contenidoHome p {
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid lightgreen;
+    box-sizing: content-box;
+    border-radius: 10px;
+    box-shadow: yellowgreen 10px 10px 20px;
+    background-color: lightblue;
+}
+#iconosDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#iconosDiv img{
+    width: 200px;
+}
+#iconosDiv p{
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: lightcoral 10px 10px 10px;
+    background-color: chartreuse;
+    color: black;
+    padding: 10px;
+    text-justify:auto;
 }
