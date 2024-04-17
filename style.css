@@ -12,7 +12,16 @@ header{
     width: 100%;
     margin: 0;
     padding: 0;
+    animation: animate 30s ease infinite;
 }
+@keyframes animate{
+    0%{background-color: aqua;}
+    25%{background-color: crimson;}
+    50%{background-color: green;}
+    75%{background-color: brown;}
+    100%{background-color: aqua;}
+}
+
 
 #botonesnav{
     background-color: transparent;
@@ -26,16 +35,17 @@ header{
     text-decoration: none;
     color: black;
     padding: 7px;
-    transition: background-color 0.5s;
     background-color: transparent;
     border: 2px black solid;
     border-radius: 5px;
     margin: 10px;
+    transition: 0.3s;
 }
 
 #botonesnav a:hover {
     color: turquoise;
     border: 2px turquoise solid;
+    background-color: blueviolet;
 }
 
 #titulo img{
