@@ -1,3 +1,4 @@
+//Aqui esta el buscador en base al numero de pagina del apartado de la API
 const apiRick=async (pagina)=>{
     let url = "https://rickandmortyapi.com/api/character/?page="+pagina;
     const api = await fetch(url);
@@ -23,6 +24,7 @@ const apiRick=async (pagina)=>{
 }
 apiRick(1);
 
+//Aqui hace la busqueda con la información que da el usuario. Luego en la funcion "imprimirficha" muestra los resultados y los imprime en la ficha.
 let personajeElegido;
 
 function searchCharacters() {
@@ -47,9 +49,9 @@ document.getElementById("resultado").innerHTML = ``
         <img src="${data.results[i].image}" class="card-img-top" alt="..." >
         <div class="information-card">
         <h5>${data.results[i].name}</h5>
-        <p><b>Estatus: </b>${data.results[i].species}</p>
-        <p><b>Estado: </b>${data.results[i].status}</p>
-        <p><b>Genero: </b>${data.results[i].genre}</p>
+        <p class="card-text"><b>Estatus: </b>${data.results[i].status}</p>
+        <p class="card-text"><b>Especie: </b>${data.results[i].species}</p>
+        <p class="card-text"><b>Genero: </b>${data.results[i].genre}</p>
          </div> 
          `;
           

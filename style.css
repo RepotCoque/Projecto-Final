@@ -14,6 +14,7 @@ header{
     padding: 0;
     animation: animate 30s ease infinite;
 }
+
 @keyframes animate{
     0%{background-color: aqua;}
     25%{background-color: crimson;}
@@ -59,8 +60,20 @@ header{
     max-width: 60%;
 }
 
+#demo{
+    background-color: #02afc5;
+    padding-top: 10px;
+}
+
 #demo button{
     background-color: #02afc5;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+#demo button:hover {
+    background-color: #016d7c;
+    padding-top: 10px;
 }
 
 .container-fluid {
@@ -69,10 +82,6 @@ header{
         margin-right:auto;
         margin-left:auto
      }
-
-#card-img-top{
-   width : px;
-}
 
 .padi{
     border: 7px;
@@ -121,11 +130,11 @@ main{
 .ficha{
     display: center;
     margin-left: 80px;
+    margin: auto;
+    border-radius: 2px;
+    border: 1px solid white;
 }
 
-.card{
-    margin: auto;
-}
 @media (min-width: 0px) {
     #resultado { grid-template-columns: repeat(1, 1fr); }
 }
@@ -149,6 +158,8 @@ main .containerBuscador{
     background-color: white;
     display: grid;
     grid-template-rows: auto;
+    padding-bottom: 15px;
+    border-radius: 5px white;
 }
 
 #descripcionTitulo{
@@ -156,12 +167,14 @@ main .containerBuscador{
     text-shadow: #0056b3 3px 3px 5px;
     text-decoration-line: underline;
 }
+
 #contenidoHome{
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 20px;
 }
+
 #contenidoHome p {
     width: 300px;
     margin: 10px;
@@ -172,15 +185,18 @@ main .containerBuscador{
     box-shadow: yellowgreen 10px 10px 20px;
     background-color: lightblue;
 }
+
 #iconosDiv{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
+
 #iconosDiv img{
     width: 200px;
 }
+
 #iconosDiv p{
     width: 300px;
     border-radius: 10px;
@@ -195,12 +211,17 @@ main .containerBuscador{
     border-radius: 15px;
     background-color: rgb(22, 46, 19);
 }
+
 #footerNav2{
     border-radius: 15px;
     background-color: rgb(45, 29, 72);
 }
 
-.card{
+.card1{
     width: 300px;
     height: 550px;
+    margin: auto;
+    background-color: white;
+    margin-top: 25px;
+    border-radius: 5px;
 }
